@@ -43,3 +43,8 @@ class Converter:
             monthly_rate_avg.append(mean(x))
         yearly_avg = mean(monthly_rate_avg)
         return yearly_avg
+
+    def export_monthly_avg(self):
+        monthly = self.get_yearly_average()
+        with open("Converter_currency_rate_export", "w") as output:
+            output.write("\n".join(map(str,monthly)))
