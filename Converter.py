@@ -46,5 +46,5 @@ class Converter:
 
     def export_monthly_avg(self):
         monthly = self.get_yearly_average()
-        with open("Converter_currency_rate_export", "w") as output:
+        with open("Converter_currency_rate_export.txt", "w") as output:
             output.write("\n".join(map(str,monthly)))
