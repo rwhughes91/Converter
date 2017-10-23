@@ -23,11 +23,19 @@ class Converter:
             self.date_spread.append(month_ls)
 
     def rate_gen(self, to):
+        if not type(to) == str:
+            raise TypeError('to must be a string.')
         for x in self.date_spread:
             monthly_rates = []
             for y in x:
                 monthly_rates.append(get_rate(self.orig_curr, to, y))
             self.rates.append(monthly_rates)
+
+    def get_monthly_average(self):
+        monthly_rate_avg = []
+        for x in self.rates:
+            monthly_rate_avg.append(mean(x))
+        return monthly_rate_avg
 
     def get_yearly_average(self):
         monthly_rate_avg = []

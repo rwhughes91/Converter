@@ -1,0 +1,16 @@
+
+fix set up so instance can hold a lot more data
+    like a dict of possible infos
+
+graph averages
+
+
+export as dataframe
+
+
+
+make it a package for distribution
+
+
+unittesting
+
